@@ -1,0 +1,9 @@
+<div ngDraggable [handle]="Title" class="window window-small-right">
+  <div #Title class="window-title">
+    <button *ngIf="closeButton" mat-button style="min-width: 60px; float: right;" (click)="toggleCollapse()"><i class="material-icons">remove</i></button>
+    <span>{{title}}</span>
+  </div>
+  <div class="window-body" [class.collapsed]="collapsed">
+    <ng-content></ng-content>
+  </div>
+</div>

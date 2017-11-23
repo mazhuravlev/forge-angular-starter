@@ -1,0 +1,15 @@
+<app-viewer></app-viewer>
+
+<app-window title="Статистика">
+  <img src="/assets/tenor.gif" width="300">
+</app-window>
+
+<app-window title="Управление">
+  <mat-card>
+    <mat-card-header>Ура!</mat-card-header>
+    <mat-card-content>
+      <mat-slide-toggle>Хорошо!</mat-slide-toggle>
+      <button mat-button mat-raised-button color="primary" (click)="snackService.info('Уведомление!')">Применить!</button>
+    </mat-card-content>
+  </mat-card>
+</app-window>

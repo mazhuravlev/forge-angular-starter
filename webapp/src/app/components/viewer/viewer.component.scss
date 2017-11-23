@@ -1,0 +1,9 @@
+$menuHeight: 0px;
+.viewer {
+  position: relative;
+  width: 100%;
+  height: -webkit-calc(100vh - #{$menuHeight});
+  height: -moz-calc(100vh - #{$menuHeight});
+  height: calc(100vh - #{$menuHeight});
+  z-index: 0;
+}

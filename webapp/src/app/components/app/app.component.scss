@@ -1,0 +1,40 @@
+mat-sidenav-container{
+ height: 100vh;
+}
+mat-sidenav {
+  padding: 20px;
+  width: 250px;
+  background-color: aliceblue;
+}
+ya-map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+.top-menu {
+  user-select: none;
+  position: absolute;
+  top: 1vh;
+}
+.top-menu-left{
+  @extend .top-menu;
+  left: 1vw;
+}
+.top-menu-right{
+  @extend .top-menu;
+  right: 1vw;
+}
+.user-icon {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba2.jpg');
+  background-size: cover;
+}
+
+.toolbar-buttons {
+  margin-left: 0.5vw;
+}
+.username{
+  padding: 10px;
+}

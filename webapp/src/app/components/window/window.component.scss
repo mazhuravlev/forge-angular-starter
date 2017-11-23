@@ -1,0 +1,52 @@
+.window {
+  position: fixed;
+  background-color: white;
+  border: 1px solid antiquewhite;
+  user-select: none;
+}
+
+.window-small{
+  @extend .window;
+  width: 400px;
+  height: 300px;
+}
+.window-small-right{
+  top: 20vh;
+  right: 10vw;
+}
+.window-tall-left{
+  top: calc(5vh + 60px);
+  bottom: 5vh;
+  left: 5vw;
+}
+
+.window-title {
+  min-height: 32px;
+  padding: 0.75rem 1.25rem;
+  background: #3f51b5;
+  margin-bottom: 0;
+  border-bottom: 1px solid #cfd8dc;
+  cursor: move;
+  user-select: none;
+  color: rgba(255,255,255,.87);
+  font: 500 20px/32px Roboto,"Helvetica Neue",sans-serif;
+}
+
+$windowCollapseTime: .2s;
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+.window-body{
+ // padding: 1rem 1.25rem 1.25rem 1.25rem;
+  overflow: hidden;
+  -webkit-transition: max-height $windowCollapseTime $easeInQuart;
+  transition: max-height  $windowCollapseTime $easeInQuart;
+  max-height: 500px;
+}
+
+.window-body.collapsed {
+  -webkit-transition: max-height  $windowCollapseTime $easeOutQuart;
+  transition: max-height  $windowCollapseTime $easeOutQuart;
+  max-height: 0;
+//  padding: 0;
+}

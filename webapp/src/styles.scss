@@ -1,0 +1,36 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+$menuHeight: 100px;
+.container {
+  padding: 16px;
+  height: -webkit-calc(100vh - #{$menuHeight});
+  height: -moz-calc(100vh - #{$menuHeight});
+  height: calc(100vh - #{$menuHeight});
+}
+
+.mat-snack-bar-container.success{
+  background: #067c34;
+}
+
+.mat-snack-bar-container.error{
+  background: #7c0802;
+}
+
+.window img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
